@@ -96,6 +96,11 @@ status: "researching"   # researching | shortlisted | applying | applied | offer
 #   greek-life-dominant  no-greek-life  need-blind-international
 tags: []
 
+# Campus / open day visit
+visited: false
+visit_date: ""
+visit_notes: ""          # what she observed, felt, and was told on the day
+
 # Factual pros and cons — specific, concrete, not scores
 pros: []
 cons: []

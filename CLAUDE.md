@@ -21,7 +21,8 @@ any session is fully recoverable.
 
 1. Read `docs/status.md` — current phase, what's done, what's pending
 2. Read `docs/project.md` — decisions made, lessons learned, open questions
-3. If a university interview was completed, also read `_data/profile.yml`
+3. Read `docs/coaching-notes.md` — research-backed coaching reference (read at least once per session)
+4. If a university interview was completed, also read `_data/profile.yml` and `_data/insights.yml`
 
 Do not make any changes until you've read status.md. It tells you exactly
 where things were left off.
