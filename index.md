@@ -10,7 +10,7 @@ title: University Comparison
 {% assign universities = site.universities | where_exp: "u", "u.name != 'Example University'" %}
 {% assign total_unis = universities | size %}
 
-<p class="summary">{{ total_unis }} universities tracked · <a href="/profile/">View profile</a> · <a href="/criteria/">Scoring criteria</a></p>
+<p class="summary">{{ total_unis }} universities tracked · <a href="{{ '/profile/' | relative_url }}">View profile</a> · <a href="{{ '/criteria/' | relative_url }}">Scoring criteria</a> · <a href="{{ '/log/' | relative_url }}">Session log</a></p>
 
 {% if total_unis == 0 %}
 <div class="empty-state">

@@ -2,6 +2,7 @@
 
 **Last updated:** 2026-03-21
 **Overall status:** Not started — ready to begin interview
+**Session log:** Published at `/log/` — update at end of each session
 
 ---
 
