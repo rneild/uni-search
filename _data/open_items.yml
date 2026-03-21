@@ -1,0 +1,17 @@
+# Open Items — questions and threads to return to
+#
+# Added whenever something comes up that can't be resolved in the moment.
+# Reviewed at the start of every session and cleared as items are resolved.
+#
+# Fields:
+#   id          — short unique slug, e.g. "canada-on-list"
+#   date        — when the item was raised
+#   raised_by   — "applicant" | "parent" | "claude" | "research"
+#   category    — subject | finances | university | process | personal | logistics
+#   item        — the question or thread, in plain language
+#   context     — why it came up; what we were talking about
+#   resolved    — false until answered
+#   resolution  — how it was resolved (fill in when resolved: true)
+#   resolved_date — date resolved
+
+open_items: []

@@ -22,7 +22,8 @@ any session is fully recoverable.
 1. Read `docs/status.md` — current phase, what's done, what's pending
 2. Read `docs/project.md` — decisions made, lessons learned, open questions
 3. Read `docs/coaching-notes.md` — research-backed coaching reference (read at least once per session)
-4. If a university interview was completed, also read `_data/profile.yml` and `_data/insights.yml`
+4. Read `_data/open_items.yml` — surface any open items at the start of the session so nothing is forgotten
+5. If a university interview was completed, also read `_data/profile.yml` and `_data/insights.yml`
 
 Do not make any changes until you've read status.md. It tells you exactly
 where things were left off.
@@ -35,8 +36,9 @@ where things were left off.
 
 1. Update `docs/status.md` — change the last-updated date and current status
 2. Append a new entry to `log.md` under a `## Session N — YYYY-MM-DD` heading
-3. Commit all changes with a clear message
-4. Push to the current working branch (`claude/university-search-database-fbbxc`)
+3. Review `_data/open_items.yml` — mark resolved items, add any new ones that emerged
+4. Commit all changes with a clear message
+5. Push to the current working branch (`claude/university-search-database-fbbxc`)
 
 The branch is merged to main periodically by the parent — you don't need to
 handle that. Just push to the feature branch.
@@ -131,6 +133,29 @@ Also valid: `rejected`, `withdrawn`
 4. **Read before writing.** Always read the relevant files before making changes.
 5. **Commit often.** An interrupted session should lose no more than one exchange of work.
 6. **Insights require her confirmation.** Before adding anything to `_data/insights.yml`, share the proposed wording with the applicant and get her agreement. Refine it until she's happy, then set `confirmed: true` and commit. Never commit an insight she hasn't signed off on.
+
+---
+
+## Managing Open Items
+
+When a question or thread comes up that can't be resolved in the moment:
+
+1. Add it to `_data/open_items.yml` immediately — don't rely on memory
+2. At session start, read the open items aloud to the group so nothing is forgotten
+3. When resolved, set `resolved: true`, fill in `resolution` and `resolved_date`
+
+Structure of each entry:
+```yaml
+- id: short-slug
+  date: "YYYY-MM-DD"
+  raised_by: applicant       # applicant | parent | claude | research
+  category: subject          # subject | finances | university | process | personal | logistics
+  item: "The question or thread in plain language."
+  context: "Why it came up — what we were discussing."
+  resolved: false
+  resolution: ""
+  resolved_date: ""
+```
 
 ---
 

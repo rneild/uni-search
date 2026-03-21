@@ -152,6 +152,17 @@ th { background: var(--bg); font-weight: 600; }
 .notes-section { margin-top: 1rem; }
 .notes-section h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
 
+/* Open items page */
+.open-items-list { list-style: none; padding: 0; }
+.open-item { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.85rem 1.1rem; margin-bottom: 0.75rem; }
+.open-item--open { border-left: 4px solid #fd7e14; }
+.open-item--resolved { border-left: 4px solid #198754; opacity: 0.7; }
+.open-item-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; }
+.open-item-meta { font-size: 0.8rem; color: var(--muted); }
+.open-item-text { margin: 0; font-weight: 500; }
+.open-item-context { margin: 0.3rem 0 0; font-size: 0.85rem; color: var(--muted); }
+.open-item-resolution { margin: 0.4rem 0 0; font-size: 0.875rem; color: #198754; }
+
 /* Insights page */
 .insight-group { margin-bottom: 2.5rem; }
 .insight-group h2 { font-size: 1.2rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.4rem; }
