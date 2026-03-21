@@ -1,0 +1,22 @@
+# Insights — conclusions, realisations, and quotes gathered along the way
+#
+# Each insight is confirmed by the applicant before being committed here.
+# Do not add an insight without first checking she agrees with the wording.
+#
+# Fields:
+#   date        — when the insight was reached
+#   category    — one of: priorities | self-knowledge | universities | process | finance
+#   text        — the insight itself, in plain language
+#   quote       — her exact words, if the insight came directly from something she said
+#   source      — where it came from: "applicant" | "research" | "conversation" | "parent"
+#   tags        — optional cross-reference tags (free text)
+#   confirmed   — must be true before committing; never set to true without her agreement
+#
+# Category guide:
+#   priorities      — what she has discovered actually matters to her
+#   self-knowledge  — things she has learned about herself through the process
+#   universities    — realisations about specific institutions or types of institution
+#   process         — insights about how to approach the decision or application
+#   finance         — realisations about cost, aid, or financial trade-offs
+
+insights: []

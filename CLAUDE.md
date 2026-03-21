@@ -129,3 +129,26 @@ Also valid: `rejected`, `withdrawn`
 3. **Flag uncertainty.** If a data point is estimated or from a secondary source, note it in `open_questions`.
 4. **Read before writing.** Always read the relevant files before making changes.
 5. **Commit often.** An interrupted session should lose no more than one exchange of work.
+6. **Insights require her confirmation.** Before adding anything to `_data/insights.yml`, share the proposed wording with the applicant and get her agreement. Refine it until she's happy, then set `confirmed: true` and commit. Never commit an insight she hasn't signed off on.
+
+---
+
+## Adding an Insight
+
+When a conclusion, realisation, or meaningful quote emerges during conversation:
+
+1. Draft the insight — keep it in her voice where it came from something she said
+2. Show it to her: *"I'd like to record this — does this capture it accurately?"*
+3. Refine based on her feedback until she's satisfied
+4. Add to `_data/insights.yml` with `confirmed: true`
+
+Structure of each entry:
+```yaml
+- date: "YYYY-MM-DD"
+  category: priorities        # priorities | self-knowledge | universities | process | finance
+  text: "The insight in plain language."
+  quote: ""                   # her exact words, if applicable — leave blank otherwise
+  source: applicant           # applicant | research | conversation | parent
+  tags: []                    # optional, e.g. [location, culture]
+  confirmed: true
+```
