@@ -1,0 +1,27 @@
+title: University Search
+description: Undergraduate university research and selection tool
+baseurl: ""
+url: ""
+
+theme: minima
+
+collections:
+  universities:
+    output: true
+    permalink: /universities/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: universities
+    values:
+      layout: university
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

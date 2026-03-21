@@ -1,0 +1,162 @@
+---
+layout: default
+---
+{% assign u = page %}
+{% assign criteria = site.data.criteria.criteria %}
+
+<article class="university-page">
+  <header class="uni-header">
+    <div class="uni-title">
+      <h1>{{ u.name }}</h1>
+      <span class="uni-location">{{ u.city }}{% if u.state_province %}, {{ u.state_province }}{% endif %} · {{ u.country }}</span>
+    </div>
+    <span class="status-badge status-{{ u.status }}">{{ u.status | replace: "_", " " | capitalize }}</span>
+  </header>
+
+  <!-- Score summary -->
+  {% assign total_weight = 0 %}
+  {% assign weighted_sum = 0 %}
+  {% for c in criteria %}
+    {% assign key = c[0] %}
+    {% assign criterion = c[1] %}
+    {% assign score = u.scores[key] %}
+    {% if score %}
+      {% assign contrib = score | times: criterion.weight %}
+      {% assign weighted_sum = weighted_sum | plus: contrib %}
+      {% assign total_weight = total_weight | plus: criterion.weight %}
+    {% endif %}
+  {% endfor %}
+  {% if total_weight > 0 %}
+    {% assign overall = weighted_sum | divided_by: total_weight %}
+  {% endif %}
+
+  <div class="score-banner">
+    <div class="overall-score">
+      {% if total_weight > 0 %}
+        <span class="score-number">{{ overall | round: 1 }}</span><span class="score-max">/10</span>
+        <span class="score-label">Weighted score</span>
+      {% else %}
+        <span class="score-label">Scoring in progress</span>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="uni-grid">
+    <!-- Key facts -->
+    <section class="card">
+      <h2>Key Facts</h2>
+      <dl>
+        <dt>Type</dt><dd>{{ u.type | replace: "_", " " | capitalize }}</dd>
+        <dt>Size</dt><dd>{{ u.size_category | capitalize }}{% if u.total_undergrad_enrollment %} ({{ u.total_undergrad_enrollment | number_with_delimiter }} undergrads){% endif %}</dd>
+        <dt>Public / Private</dt><dd>{{ u.public_private | capitalize }}</dd>
+        {% if u.website %}<dt>Website</dt><dd><a href="{{ u.website }}" target="_blank">{{ u.website }}</a></dd>{% endif %}
+      </dl>
+    </section>
+
+    <!-- Rankings -->
+    <section class="card">
+      <h2>Rankings</h2>
+      <dl>
+        {% if u.rankings.qs_world %}<dt>QS World</dt><dd>#{{ u.rankings.qs_world }}</dd>{% endif %}
+        {% if u.rankings.times_world %}<dt>Times World</dt><dd>#{{ u.rankings.times_world }}</dd>{% endif %}
+        {% if u.rankings.us_news_national %}<dt>US News National</dt><dd>#{{ u.rankings.us_news_national }}</dd>{% endif %}
+        {% if u.rankings.guardian_uk %}<dt>Guardian UK</dt><dd>#{{ u.rankings.guardian_uk }}</dd>{% endif %}
+        {% if u.rankings.complete_university_guide %}<dt>Complete Uni Guide</dt><dd>#{{ u.rankings.complete_university_guide }}</dd>{% endif %}
+        {% if u.rankings.subject_rank %}<dt>Subject rank</dt><dd>#{{ u.rankings.subject_rank }}{% if u.rankings.subject_rank_source %} ({{ u.rankings.subject_rank_source }}){% endif %}</dd>{% endif %}
+      </dl>
+    </section>
+
+    <!-- Admissions -->
+    <section class="card">
+      <h2>Admissions</h2>
+      <dl>
+        {% if u.admissions.acceptance_rate_pct %}<dt>Acceptance rate</dt><dd>{{ u.admissions.acceptance_rate_pct }}%</dd>{% endif %}
+        {% if u.admissions.a_level_typical != "" %}<dt>A-level (typical)</dt><dd>{{ u.admissions.a_level_typical }}</dd>{% endif %}
+        {% if u.admissions.ib_typical %}<dt>IB (typical)</dt><dd>{{ u.admissions.ib_typical }} points</dd>{% endif %}
+        {% if u.admissions.sat_range != "" %}<dt>SAT range</dt><dd>{{ u.admissions.sat_range }}</dd>{% endif %}
+        {% if u.admissions.act_range != "" %}<dt>ACT range</dt><dd>{{ u.admissions.act_range }}</dd>{% endif %}
+        {% if u.admissions.application_system != "" %}<dt>Application</dt><dd>{{ u.admissions.application_system }}</dd>{% endif %}
+        {% if u.admissions.application_deadline != "" %}<dt>Deadline</dt><dd>{{ u.admissions.application_deadline }}</dd>{% endif %}
+        {% if u.admissions.early_deadline != "" %}<dt>Early deadline</dt><dd>{{ u.admissions.early_deadline }} ({{ u.admissions.early_type }})</dd>{% endif %}
+      </dl>
+    </section>
+
+    <!-- Finances -->
+    <section class="card">
+      <h2>Finances (annual, USD)</h2>
+      <dl>
+        {% if u.finances.tuition_international_usd %}<dt>International tuition</dt><dd>${{ u.finances.tuition_international_usd | number_with_delimiter }}</dd>{% endif %}
+        {% if u.finances.tuition_domestic_usd %}<dt>Domestic tuition</dt><dd>${{ u.finances.tuition_domestic_usd | number_with_delimiter }}</dd>{% endif %}
+        {% if u.finances.living_cost_estimate_usd %}<dt>Living costs (est.)</dt><dd>${{ u.finances.living_cost_estimate_usd | number_with_delimiter }}</dd>{% endif %}
+        {% if u.finances.total_cost_estimate_usd %}<dt>Total cost (est.)</dt><dd><strong>${{ u.finances.total_cost_estimate_usd | number_with_delimiter }}</strong></dd>{% endif %}
+        {% if u.finances.financial_aid_available != null %}<dt>Financial aid</dt><dd>{% if u.finances.financial_aid_available %}Yes{% else %}No{% endif %}{% if u.finances.aid_for_international %} (incl. international){% endif %}</dd>{% endif %}
+      </dl>
+    </section>
+
+    <!-- Relevant courses -->
+    {% if u.relevant_courses.size > 0 %}
+    <section class="card card-wide">
+      <h2>Relevant Courses</h2>
+      {% for course in u.relevant_courses %}
+        {% if course.name != "" %}
+        <div class="course-item">
+          <strong>{{ course.degree }}</strong>
+          {% if course.duration_years %}<span class="muted">· {{ course.duration_years }} years</span>{% endif %}
+          {% if course.notes %}<p class="muted">{{ course.notes }}</p>{% endif %}
+          {% if course.course_url %}<a href="{{ course.course_url }}" target="_blank">Course page →</a>{% endif %}
+        </div>
+        {% endif %}
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    <!-- Scores breakdown -->
+    <section class="card card-wide">
+      <h2>Scores Breakdown</h2>
+      <table class="scores-table">
+        <thead>
+          <tr><th>Criterion</th><th>Weight</th><th>Score</th><th>Contribution</th></tr>
+        </thead>
+        <tbody>
+          {% for c in criteria %}
+            {% assign key = c[0] %}
+            {% assign criterion = c[1] %}
+            {% assign score = u.scores[key] %}
+            <tr>
+              <td>{{ criterion.label }}</td>
+              <td>{{ criterion.weight }}</td>
+              <td>{% if score %}{{ score }}{% else %}<span class="muted">—</span>{% endif %}</td>
+              <td>{% if score %}{{ score | times: criterion.weight | round: 1 }}{% else %}<span class="muted">—</span>{% endif %}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Pros / Cons -->
+    {% if u.pros.size > 0 or u.cons.size > 0 %}
+    <section class="card">
+      <h2>Pros</h2>
+      <ul>{% for p in u.pros %}<li>{{ p }}</li>{% endfor %}</ul>
+    </section>
+    <section class="card">
+      <h2>Cons</h2>
+      <ul>{% for c in u.cons %}<li>{{ c }}</li>{% endfor %}</ul>
+    </section>
+    {% endif %}
+
+    {% if u.open_questions.size > 0 %}
+    <section class="card card-wide">
+      <h2>Open Questions</h2>
+      <ul>{% for q in u.open_questions %}<li>{{ q }}</li>{% endfor %}</ul>
+    </section>
+    {% endif %}
+  </div>
+
+  <!-- Free text notes from the markdown body -->
+  {% if content != "" %}
+  <section class="card card-wide notes-section">
+    {{ content }}
+  </section>
+  {% endif %}
+</article>
