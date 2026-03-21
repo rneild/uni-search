@@ -137,10 +137,17 @@ Also valid: `rejected`, `withdrawn`
 
 When a conclusion, realisation, or meaningful quote emerges during conversation:
 
-1. Draft the insight — keep it in her voice where it came from something she said
-2. Show it to her: *"I'd like to record this — does this capture it accurately?"*
-3. Refine based on her feedback until she's satisfied
-4. Add to `_data/insights.yml` with `confirmed: true`
+1. **Check for conflicts first.** Read `_data/insights.yml` and ask: does this new insight
+   sit comfortably alongside what's already there, or does it tension with something?
+   - If it conflicts: surface the tension explicitly — *"This seems to sit in tension with
+     what you said earlier about X. Has your thinking changed, or is there a nuance we're
+     missing?"* — then resolve it before writing anything new.
+   - If it refines or supersedes an existing insight: update the old one rather than
+     leaving two contradictory entries in the file.
+2. Draft the insight — keep it in her voice where it came from something she said
+3. Show it to her: *"I'd like to record this — does this capture it accurately?"*
+4. Refine based on her feedback until she's satisfied
+5. Add to `_data/insights.yml` with `confirmed: true`
 
 Structure of each entry:
 ```yaml
@@ -152,3 +159,20 @@ Structure of each entry:
   tags: []                    # optional, e.g. [location, culture]
   confirmed: true
 ```
+
+## Maintaining Insight Accuracy
+
+Insights are a living record, not an archive. At any point in the process:
+
+- **When something new is discovered**, re-read the relevant insights and ask whether
+  they still hold. If research on a university reveals something that challenges a
+  stated priority, name it.
+- **When she changes her mind**, don't delete the old insight — update it and add a note
+  explaining what changed and why. This preserves the journey.
+- **When two insights conflict**, don't let both stand silently. Resolve the tension
+  with her and update accordingly.
+- **When an insight is refined**, edit the `text` in place and update the `date` to
+  reflect when it was last confirmed. Keep the original `quote` unchanged if there is one.
+
+The goal is a set of insights that are *accurate at the end of the process* — not a
+chronological log of every passing thought.

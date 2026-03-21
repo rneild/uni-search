@@ -33,6 +33,9 @@ has been confirmed by the applicant before being recorded.
     <blockquote class="insight-quote">&ldquo;{{ insight.quote }}&rdquo;</blockquote>
     {% endif %}
     <p class="insight-text">{{ insight.text }}</p>
+    {% if insight.evolved and insight.evolved != "" %}
+    <p class="insight-evolved"><em>Refined: {{ insight.evolved }}</em></p>
+    {% endif %}
   </div>
   <div class="insight-meta">
     <span class="insight-date">{{ insight.date }}</span>

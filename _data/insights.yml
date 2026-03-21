@@ -4,13 +4,20 @@
 # Do not add an insight without first checking she agrees with the wording.
 #
 # Fields:
-#   date        — when the insight was reached
+#   date        — when the insight was last confirmed (update if refined)
 #   category    — one of: priorities | self-knowledge | universities | process | finance
-#   text        — the insight itself, in plain language
+#   text        — the insight itself, in plain language; edit in place when refined
 #   quote       — her exact words, if the insight came directly from something she said
 #   source      — where it came from: "applicant" | "research" | "conversation" | "parent"
 #   tags        — optional cross-reference tags (free text)
 #   confirmed   — must be true before committing; never set to true without her agreement
+#   evolved     — optional note explaining how/why this insight changed from its original form
+#
+# Maintenance rules:
+#   - Before adding a new insight, check for conflicts with existing ones
+#   - If a conflict exists, resolve it with the applicant before committing
+#   - When an insight is refined, edit text in place and update the date
+#   - Do not leave two contradictory insights both standing
 #
 # Category guide:
 #   priorities      — what she has discovered actually matters to her
