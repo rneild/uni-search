@@ -133,6 +133,30 @@ layout: default
       </table>
     </section>
 
+    <!-- Tags -->
+    {% if u.tags.size > 0 %}
+    <section class="card card-wide">
+      <h2>Tags</h2>
+      <div class="tag-list">{% for t in u.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+    </section>
+    {% endif %}
+
+    <!-- Her impression -->
+    {% if u.her_impression and u.her_impression != "" %}
+    <section class="card card-wide">
+      <h2>Her Impression</h2>
+      <blockquote class="impression">{{ u.her_impression }}</blockquote>
+    </section>
+    {% endif %}
+
+    <!-- Culture notes -->
+    {% if u.culture_notes and u.culture_notes != "" %}
+    <section class="card card-wide">
+      <h2>Culture &amp; Environment</h2>
+      <p>{{ u.culture_notes }}</p>
+    </section>
+    {% endif %}
+
     <!-- Pros / Cons -->
     {% if u.pros.size > 0 or u.cons.size > 0 %}
     <section class="card">

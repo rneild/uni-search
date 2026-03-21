@@ -85,9 +85,31 @@ weighted_score: null
 # --- Status in your application process ---
 status: "researching"   # researching | shortlisted | applying | applied | offer | rejected | withdrawn
 
-# --- Notes ---
+# --- Qualitative / non-numeric information ---
+
+# Searchable tags — descriptors that are true of this university but don't
+# fit on a 1-10 scale. Use consistently across universities so they're
+# comparable. Examples:
+#   strong-research  good-aid-international  large-lectures  small-seminars
+#   strong-community  quarter-system  semester-system  co-op-program
+#   year-abroad-required  year-abroad-optional  campus-city  campus-rural
+#   greek-life-dominant  no-greek-life  need-blind-international
+tags: []
+
+# Factual pros and cons — specific, concrete, not scores
 pros: []
 cons: []
+
+# Her impression — what she has said or feels about this university,
+# in her own words where possible. Updated as she learns more.
+her_impression: ""
+
+# Culture and environment notes — qualitative description of what the
+# university is actually like to attend, beyond what rankings capture.
+# Sources: current students, campus visits, forums, university prospectus.
+culture_notes: ""
+
+# Things still unknown or needing verification
 open_questions: []
 ---
 

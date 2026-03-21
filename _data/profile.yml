@@ -46,4 +46,20 @@ preferences:
     sports_important: null
     greek_life: ""        # "important", "not_wanted", "no preference"
 
-notes: ""
+# Non-negotiable requirements — things that must be true regardless of score.
+# These can rule a university in or out independently of the weighted scoring.
+# Examples: "Must offer a year abroad option", "Must not be in a rural location"
+must_haves: []
+
+# Deal breakers — things that would rule a university out entirely.
+# Examples: "No Greek life dominating social scene", "Not a purely commuter campus"
+deal_breakers: []
+
+# Qualitative notes from the interview — things she said that matter but
+# don't fit neatly into a structured field. Free text, preserved verbatim
+# where possible so her voice isn't lost in translation.
+qualitative_notes: |
+
+# Things she's uncertain about or wants to explore further.
+# These shape the research agenda and interview follow-ups.
+open_questions: []
