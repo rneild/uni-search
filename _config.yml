@@ -1,7 +1,7 @@
 title: University Search
 description: Undergraduate university research and selection tool
-baseurl: ""
-url: ""
+baseurl: "/uni-search"
+url: "https://rneild.github.io"
 
 theme: minima
 

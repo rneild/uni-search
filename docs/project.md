@@ -93,6 +93,7 @@ The process runs in four broad stages:
 | 2026-03-21 | docs/ excluded from Jekyll build | Reference docs shouldn't appear as site pages |
 | 2026-03-21 | College Scorecard API as primary US data source | Official, free, comprehensive, structured — API key required |
 | 2026-03-21 | Status file (`docs/status.md`) maintained per-exchange | Process is likely to be interrupted; full recoverability required |
+| 2026-03-21 | GitHub Pages enabled at https://rneild.github.io/uni-search | Site live; `_config.yml` updated with correct baseurl and url |
 
 ---
 

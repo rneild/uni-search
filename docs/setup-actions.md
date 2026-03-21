@@ -75,7 +75,7 @@ Claude can then reference this when running data-fetch scripts locally.
 
 | Action | Status | Notes |
 |--------|--------|-------|
-| College Scorecard API key | Not done | Required before US auto-population |
+| College Scorecard API key | Done | Key stored in `.env` |
 | Discover Uni data download | Not done | Useful for UK university research |
-| GitHub Pages enabled | Not done | Optional but makes the site viewable anywhere |
-| `.env` file created | Not done | After API key obtained |
+| GitHub Pages enabled | Done | Live at https://rneild.github.io/uni-search |
+| `.env` file created | Done | Gitignored, stays local |
