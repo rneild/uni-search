@@ -1,0 +1,65 @@
+# Scoring Criteria & Weights
+# Each criterion has a weight (0-10). Total score = weighted average across all criteria.
+# Weights are set collaboratively during the interview process.
+# Per-university scores (0-10) are recorded in each university's YAML front matter.
+
+criteria:
+  academic_reputation:
+    label: Academic reputation in your subject
+    weight: 5
+    notes: ""
+
+  overall_ranking:
+    label: Overall university ranking
+    weight: 3
+    notes: ""
+
+  course_fit:
+    label: Course structure / curriculum fit
+    weight: 5
+    notes: ""
+
+  entry_requirements:
+    label: Entry requirements match your grades
+    weight: 4
+    notes: "Higher score = more achievable"
+
+  cost:
+    label: Affordability (tuition + living)
+    weight: 4
+    notes: "Higher score = more affordable"
+
+  financial_aid:
+    label: Financial aid / scholarship availability
+    weight: 3
+    notes: ""
+
+  location:
+    label: Location desirability
+    weight: 4
+    notes: ""
+
+  campus_life:
+    label: Campus life and community
+    weight: 3
+    notes: ""
+
+  size:
+    label: Institution size match
+    weight: 2
+    notes: ""
+
+  employability:
+    label: Graduate employability / careers support
+    weight: 4
+    notes: ""
+
+  research_opportunities:
+    label: Undergraduate research opportunities
+    weight: 2
+    notes: ""
+
+  international_community:
+    label: International student community
+    weight: 2
+    notes: ""

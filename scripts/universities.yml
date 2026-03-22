@@ -1,0 +1,48 @@
+# University fetch list
+# ----------------------
+# Add one entry per university. Run `python3 scripts/fetch_all.py` to process all.
+#
+# Fields:
+#   name     : exact name to search in College Scorecard (US) or for manual research (UK/CA)
+#   slug     : filename to use under _universities/ (auto-generated if omitted)
+#   country  : USA | UK | Canada
+#   notes    : optional — any known facts to pre-fill or watch out for
+#
+# College Scorecard is used automatically for country: USA.
+# UK and Canada entries are flagged for manual / web research.
+
+universities:
+
+  # ── USA ──────────────────────────────────────────────────────────────────
+  # (populate after interview)
+
+  # - name: "Massachusetts Institute of Technology"
+  #   slug: mit
+  #   country: USA
+
+  # - name: "University of Michigan-Ann Arbor"
+  #   country: USA
+
+  # - name: "University of California-Berkeley"
+  #   slug: uc-berkeley
+  #   country: USA
+
+
+  # ── UK ───────────────────────────────────────────────────────────────────
+  # (populate after interview — fetched via web research, not Scorecard)
+
+  # - name: "University of Oxford"
+  #   slug: oxford
+  #   country: UK
+
+  # - name: "Imperial College London"
+  #   slug: imperial
+  #   country: UK
+
+
+  # ── Canada ───────────────────────────────────────────────────────────────
+  # (populate after interview)
+
+  # - name: "University of Toronto"
+  #   slug: toronto
+  #   country: Canada

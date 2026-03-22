@@ -1,0 +1,65 @@
+# Student Profile
+# This file is filled out via interview — do not edit manually
+# Run: ask Claude to conduct the profile interview
+
+personal:
+  name: ""
+  nationality: ""          # affects tuition tier (domestic/international)
+  current_country: ""      # where you live now
+
+academic:
+  # Current qualifications / predicted grades
+  qualifications: []       # e.g. ["A-Levels", "IB", "AP"]
+  grades: {}               # e.g. {maths: A*, physics: A, chemistry: A}
+  predicted: {}            # predicted grades if not yet completed
+  sat_act: {}              # e.g. {SAT: 1480, ACT: null}
+  gpa: null                # if applicable
+
+interests:
+  subjects: []             # e.g. ["Computer Science", "Mathematics"]
+  career_directions: []    # broad career ideas, can be vague
+  extracurricular: []      # activities, sports, arts etc.
+
+preferences:
+  # These feed into the scoring system in criteria.yml
+  location:
+    regions: []            # e.g. ["New England", "California", "London", "Scotland"]
+    urban_rural: ""        # "urban", "suburban", "rural", "no preference"
+    max_distance_from_home: null  # km, null = no constraint
+
+  institution:
+    size: ""               # "small" (<5k), "medium" (5-15k), "large" (>15k), "no preference"
+    type: ""               # "research_university", "liberal_arts", "no preference"
+    single_sex: false
+
+  study:
+    degree_type: ""        # e.g. "BSc", "BA", "integrated masters"
+    course_style: ""       # "broad_first_year", "specialised_from_start", "no preference"
+    year_abroad: null      # true/false/null
+
+  finances:
+    budget_annual_usd: null     # total annual budget including living
+    financial_aid_needed: null  # true/false
+
+  campus_life:
+    accommodation: ""     # "on_campus_required", "prefer_on_campus", "no preference"
+    sports_important: null
+    greek_life: ""        # "important", "not_wanted", "no preference"
+
+# Non-negotiable requirements — things that must be true regardless of score.
+# These can rule a university in or out independently of the weighted scoring.
+# Examples: "Must offer a year abroad option", "Must not be in a rural location"
+must_haves: []
+
+# Deal breakers — things that would rule a university out entirely.
+# Examples: "No Greek life dominating social scene", "Not a purely commuter campus"
+deal_breakers: []
+
+# Qualitative notes from the interview — things she said that matter but
+# don't fit neatly into a structured field. Free text, preserved verbatim
+# where possible so her voice isn't lost in translation.
+qualitative_notes: |
+
+# Things she's uncertain about or wants to explore further.
+# These shape the research agenda and interview follow-ups.
+open_questions: []
