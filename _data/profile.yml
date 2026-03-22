@@ -4,62 +4,141 @@
 
 personal:
   name: ""
-  nationality: ""          # affects tuition tier (domestic/international)
-  current_country: ""      # where you live now
+  nationality: "US"            # affects tuition tier (domestic/international)
+  current_country: "USA"       # where you live now
+  current_city: "Portland, OR"
+  school: "St. Mary's Academy, Portland OR"  # rigorous private college-prep
 
 academic:
-  # Current qualifications / predicted grades
-  qualifications: []       # e.g. ["A-Levels", "IB", "AP"]
-  grades: {}               # e.g. {maths: A*, physics: A, chemistry: A}
-  predicted: {}            # predicted grades if not yet completed
-  sat_act: {}              # e.g. {SAT: 1480, ACT: null}
-  gpa: null                # if applicable
+  qualifications: ["AP", "Honors"]
+  completed_courses:
+    - "Honors English 10"
+    - "Honors Human Geography"
+    - "Honors Chemistry"
+  current_courses:
+    - "AP Language and Composition"
+    - "AP Chemistry"
+    - "Honors Biology"
+  planned_courses:
+    - "AP European History"
+    - "AP Statistics"
+    - "Science Research Methods (internship-based)"
+  grades: {}
+  gpa: 4.0                     # weighted, straight-A student
+  sat_act:
+    PSAT: 1310                 # Oct sitting, junior year (680 R&W, 630 Math)
+    PSAT_breakdown: {reading_writing: 680, math: 630}
+    SAT: null                  # planned: next month and May
+    SAT_target: 1400           # realistic target with active practice
+  year_group: "Junior"
+  entry_year: 2026
 
 interests:
-  subjects: []             # e.g. ["Computer Science", "Mathematics"]
-  career_directions: []    # broad career ideas, can be vague
-  extracurricular: []      # activities, sports, arts etc.
+  subjects:
+    - Chemistry
+    - Biology
+    - Psychology
+    - Anatomy
+    - Forensics
+  career_directions:
+    - Forensic pathology (primary — requires MD)
+    - Medicine / premed
+    - Forensic science (lab work)
+    - Criminal investigation (secondary interest)
+  notes: >
+    Loves understanding how the human body works. Took anatomy last year and
+    loved it. Just finished fetal pig dissection in Honors Bio and had a great
+    time. Motivated by helping people. AP Chem currently her favourite subject.
+    Forensic pathology ties together almost all her interests.
+  extracurricular:
+    - activity: Science Olympiad
+      duration: 3 years
+      events: [Forensics, Chem Lab, Anatomy & Physiology, Disease Detectives]
+      leadership: >
+        Captain of Chem Lab this year. Plans to captain whole team + Forensics
+        or Chem Lab next year.
+    - activity: Orchestra
+      duration: 3 years
+    - activity: Technical Theater
 
 preferences:
-  # These feed into the scoring system in criteria.yml
   location:
-    regions: []            # e.g. ["New England", "California", "London", "Scotland"]
-    urban_rural: ""        # "urban", "suburban", "rural", "no preference"
-    max_distance_from_home: null  # km, null = no constraint
+    regions:
+      - "New England"
+      - "Mid-Atlantic"
+      - "Pacific Northwest"    # open to staying if perfect school found
+    notes: >
+      Primary interest is East Coast — finds it beautiful, wants a new
+      experience. Family in New York provides a support network. Pacific
+      Northwest acceptable if the right school. Does NOT want to stay local
+      (UP explicitly ruled out as too close to home).
+    urban_rural: "no preference"
+    max_distance_from_home: null
+
+  climate:
+    preference: "cold and temperate"
+    notes: >
+      Self-describes as "allergic to heat." Reports reverse seasonal
+      depression — genuinely sad in summer, thrives in cold/grey weather.
+      Loves cold winters. Does not require snow all year. Warm/humid climates
+      are a significant negative.
+    ruled_out: ["hot", "humid", "sunny year-round"]
 
   institution:
-    size: ""               # "small" (<5k), "medium" (5-15k), "large" (>15k), "no preference"
-    type: ""               # "research_university", "liberal_arts", "no preference"
+    size: "medium"             # UW too big, Puget Sound too small
+    size_notes: >
+      Toured UW (too big) and University of Puget Sound (too small). Wants
+      smaller class sizes — finds 700-person lecture halls uncomfortable as
+      an introvert. Open to larger research universities if culture supports
+      small classes and close faculty relationships.
+    type: "no preference"      # open to both research uni and liberal arts
+    type_notes: >
+      Drawn to liberal arts for broad learning and love of obscure subjects.
+      Also values research university opportunities. Key requirement is
+      small/intimate class environment regardless of institution type.
     single_sex: false
 
   study:
-    degree_type: ""        # e.g. "BSc", "BA", "integrated masters"
-    course_style: ""       # "broad_first_year", "specialised_from_start", "no preference"
-    year_abroad: null      # true/false/null
+    degree_type: "BA or BS"
+    course_style: "broad_first_year"   # liberal arts appeal; likes learning widely
+    year_abroad: null
+    premed: true               # keeping MD path open for forensic pathology
 
   finances:
-    budget_annual_usd: null     # total annual budget including living
-    financial_aid_needed: null  # true/false
+    budget_annual_usd: null    # deferred — to discuss with parent
+    financial_aid_needed: null # deferred
 
   campus_life:
-    accommodation: ""     # "on_campus_required", "prefer_on_campus", "no preference"
+    accommodation: "no preference"
     sports_important: null
-    greek_life: ""        # "important", "not_wanted", "no preference"
+    greek_life: "no preference"
 
-# Non-negotiable requirements — things that must be true regardless of score.
-# These can rule a university in or out independently of the weighted scoring.
-# Examples: "Must offer a year abroad option", "Must not be in a rural location"
-must_haves: []
+# Non-negotiable requirements
+must_haves:
+  - "Cool/cold climate — warm climates are a dealbreaker"
+  - "Strong chemistry and/or biology program (premed pathway)"
+  - "Small class sizes or accessible faculty"
 
-# Deal breakers — things that would rule a university out entirely.
-# Examples: "No Greek life dominating social scene", "Not a purely commuter campus"
-deal_breakers: []
+# Deal breakers
+deal_breakers:
+  - "Hot or warm climate"
+  - "Purely local / too close to Portland (e.g. UP)"
+  - "Very large impersonal lecture-only environment"
 
-# Qualitative notes from the interview — things she said that matter but
-# don't fit neatly into a structured field. Free text, preserved verbatim
-# where possible so her voice isn't lost in translation.
+# Qualitative notes
 qualitative_notes: |
+  "I'm allergic to heat." — her words on climate preference.
+  Reverse seasonal depression — thrives in grey, cold weather; struggles in summer.
+  Introverted — speaks up once she feels comfortable; harder in large settings.
+  Loves learning broadly, not just within a narrow major.
+  Science Olympiad events (Forensics, Chem Lab, A&P) mirror her academic interests
+  precisely — this is a student who lives her interests, not just lists them.
+  University of Alaska Fairbanks is on the list primarily because her best friend
+  is going there — treat as a safety/social wildcard rather than a pure academic fit.
 
 # Things she's uncertain about or wants to explore further.
-# These shape the research agenda and interview follow-ups.
-open_questions: []
+open_questions:
+  - "Budget and financial aid picture — deferred to parent"
+  - "Whether to prioritise liberal arts colleges or research universities with small-class cultures"
+  - "SAT score trajectory — next sitting will clarify realistic range for selective schools"
+  - "Forensic pathology programs specifically — worth researching which undergrad paths are best-regarded for med school + forensic path"

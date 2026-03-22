@@ -2,16 +2,73 @@
 #
 # Added whenever something comes up that can't be resolved in the moment.
 # Reviewed at the start of every session and cleared as items are resolved.
-#
-# Fields:
-#   id          — short unique slug, e.g. "canada-on-list"
-#   date        — when the item was raised
-#   raised_by   — "applicant" | "parent" | "claude" | "research"
-#   category    — subject | finances | university | process | personal | logistics
-#   item        — the question or thread, in plain language
-#   context     — why it came up; what we were talking about
-#   resolved    — false until answered
-#   resolution  — how it was resolved (fill in when resolved: true)
-#   resolved_date — date resolved
 
-open_items: []
+open_items:
+
+  - id: finances-budget
+    date: "2026-03-22"
+    raised_by: claude
+    category: finances
+    item: "What is the annual budget (tuition + living) and is financial aid required?"
+    context: >
+      Deferred during profile interview at applicant's request. Critical for
+      assessing which schools on the shortlist are realistic — US private
+      university costs run $75–85k/year all-in. Some schools (Brown, Amherst)
+      meet 100% of demonstrated need; others offer very little.
+    resolved: false
+    resolution: ""
+    resolved_date: ""
+
+  - id: sat-score-trajectory
+    date: "2026-03-22"
+    raised_by: claude
+    category: process
+    item: "What does she score on the actual SAT (sittings planned next month and in May)?"
+    context: >
+      PSAT was 1310 (680 R&W, 630 Math) in October junior year. Active
+      practice ongoing with parent. SAT score will determine realistic reach
+      vs target vs safety categorisation, especially for Brown, Amherst,
+      Tufts, Middlebury.
+    resolved: false
+    resolution: ""
+    resolved_date: ""
+
+  - id: forensic-pathology-undergrad-path
+    date: "2026-03-22"
+    raised_by: claude
+    category: subject
+    item: "Which undergraduate majors and school types are best-regarded as preparation for forensic pathology (MD + forensic path)?"
+    context: >
+      Forensic pathology requires an MD. Research needed on whether a
+      chemistry major, biology major, or something else is the strongest
+      med school prep, and whether liberal arts colleges or research
+      universities have better med school placement rates.
+    resolved: false
+    resolution: ""
+    resolved_date: ""
+
+  - id: alaska-fairbanks-status
+    date: "2026-03-22"
+    raised_by: claude
+    category: university
+    item: "Is University of Alaska Fairbanks being treated as a genuine option or primarily a social/safety school?"
+    context: >
+      Applicant mentioned it's on the list because her best friend is going
+      there. Worth clarifying how seriously she's considering it so we weight
+      research effort accordingly.
+    resolved: false
+    resolution: ""
+    resolved_date: ""
+
+  - id: shortlist-size
+    date: "2026-03-22"
+    raised_by: claude
+    category: process
+    item: "Does she want to narrow the shortlist before or after we research all 18 schools?"
+    context: >
+      18 schools is a large list. Worth discussing whether to do light-touch
+      research on all first and then cut, or whether some can be ruled out
+      now based on known factors (climate, size, etc.).
+    resolved: false
+    resolution: ""
+    resolved_date: ""

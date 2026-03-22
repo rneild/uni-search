@@ -1,65 +1,76 @@
 # Scoring Criteria & Weights
 # Each criterion has a weight (0-10). Total score = weighted average across all criteria.
-# Weights are set collaboratively during the interview process.
-# Per-university scores (0-10) are recorded in each university's YAML front matter.
+# Weights set after interview with applicant on 2026-03-22.
+# Per-university scores (1-10) are recorded in each university's YAML front matter.
+# DO NOT change weights without explicit approval from applicant/parent.
 
 criteria:
   academic_reputation:
     label: Academic reputation in your subject
-    weight: 5
-    notes: ""
-
-  overall_ranking:
-    label: Overall university ranking
-    weight: 3
-    notes: ""
+    weight: 8
+    notes: "Strong chem/bio/psychology + premed pathway is central to her plans"
 
   course_fit:
     label: Course structure / curriculum fit
-    weight: 5
-    notes: ""
+    weight: 8
+    notes: "Must support premed + forensic pathology direction; liberal arts breadth a plus"
+
+  climate:
+    label: Climate match
+    weight: 9
+    notes: "Cold/temperate strongly preferred; warm climate is near-dealbreaker"
+
+  size_culture:
+    label: Class size and faculty accessibility
+    weight: 8
+    notes: "Small classes essential — introverted learner who needs to feel comfortable to thrive"
+
+  research_opportunities:
+    label: Undergraduate research opportunities
+    weight: 7
+    notes: "Science research methods class next year signals genuine interest in research"
 
   entry_requirements:
-    label: Entry requirements match your grades
-    weight: 4
-    notes: "Higher score = more achievable"
-
-  cost:
-    label: Affordability (tuition + living)
-    weight: 4
-    notes: "Higher score = more affordable"
-
-  financial_aid:
-    label: Financial aid / scholarship availability
-    weight: 3
-    notes: ""
+    label: Entry requirements match her grades
+    weight: 6
+    notes: "Higher score = more achievable. 4.0 GPA, SAT TBD — selective schools are possible"
 
   location:
     label: Location desirability
+    weight: 6
+    notes: "East Coast (New England/Mid-Atlantic) preferred; Pacific Northwest acceptable"
+
+  forensics_criminology:
+    label: Forensics / criminology course availability
+    weight: 6
+    notes: "Any courses in forensic science, criminology, or forensic psychology are a plus"
+
+  overall_ranking:
+    label: Overall university ranking
     weight: 4
     notes: ""
 
   campus_life:
     label: Campus life and community
-    weight: 3
+    weight: 4
     notes: ""
 
-  size:
-    label: Institution size match
-    weight: 2
-    notes: ""
+  cost:
+    label: Affordability (tuition + living)
+    weight: 4
+    notes: "Higher score = more affordable. Weight may increase once budget is confirmed"
+
+  financial_aid:
+    label: Financial aid / scholarship availability
+    weight: 3
+    notes: "Weight may increase once financial picture is confirmed"
 
   employability:
     label: Graduate employability / careers support
     weight: 4
-    notes: ""
-
-  research_opportunities:
-    label: Undergraduate research opportunities
-    weight: 2
-    notes: ""
+    notes: "Med school placement rate relevant for premed track"
 
   international_community:
     label: International student community
-    weight: 2
-    notes: ""
+    weight: 1
+    notes: "Domestic student — lower relevance"
