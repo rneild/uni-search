@@ -26,4 +26,68 @@
 #   process         — insights about how to approach the decision or application
 #   finance         — realisations about cost, aid, or financial trade-offs
 
-insights: []
+insights:
+
+  - date: "2026-03-22"
+    category: priorities
+    text: >
+      Climate is a near-dealbreaker, not just a preference. A warm climate
+      isn't just inconvenient — it actively affects her mood. She experiences
+      reverse seasonal depression and genuinely thrives in cold, grey weather.
+      This should filter universities early, not late.
+    quote: "I'm allergic to heat."
+    source: applicant
+    tags: [climate, location, dealbreaker]
+    confirmed: true
+
+  - date: "2026-03-22"
+    category: self-knowledge
+    text: >
+      She lives her interests — she doesn't just list them. Science Olympiad
+      events (Forensics, Chem Lab, A&P, Disease Detectives) map almost exactly
+      onto her stated academic interests and career direction. Her
+      extracurriculars aren't padding; they're evidence of sustained, genuine
+      curiosity.
+    quote: ""
+    source: conversation
+    tags: [extracurricular, authenticity, forensics, chemistry]
+    confirmed: true
+
+  - date: "2026-03-22"
+    category: priorities
+    text: >
+      Forensic pathology is a genuine and specific aspiration, not a vague
+      direction — but it's held with appropriate openness. She's drawn to it
+      because it ties together almost everything she loves, and she'd love to
+      pursue it. At the same time, she's open to other medical fields and wants
+      to take pre-med prerequisite courses first before fully committing to the
+      MD track. Many schools allow students to begin pre-med requirements up to
+      two years in, so she has room to explore and confirm it feels right.
+    quote: ""
+    source: applicant
+    tags: [career, premed, forensics, medicine]
+    confirmed: true
+
+  - date: "2026-03-22"
+    category: self-knowledge
+    text: >
+      She needs to feel comfortable before she engages. As an introvert, she
+      participates deeply once at ease — but large, impersonal environments
+      work against that. A 700-person lecture hall isn't just a preference
+      issue; it's a learning effectiveness issue.
+    quote: ""
+    source: applicant
+    tags: [introvert, class-size, learning-style]
+    confirmed: true
+
+  - date: "2026-03-22"
+    category: priorities
+    text: >
+      She wants a new experience, not just a good school. The East Coast
+      preference isn't about rankings — it's about wanting something genuinely
+      different from Portland. The experience of being somewhere new is part
+      of what she's choosing.
+    quote: ""
+    source: conversation
+    tags: [location, east-coast, independence]
+    confirmed: true
