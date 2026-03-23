@@ -1,6 +1,6 @@
 # Interview & Research Status
 
-**Last updated:** 2026-03-22
+**Last updated:** 2026-03-23
 **Overall status:** Interview complete (finances deferred) — ready to begin university research
 **Session log:** Published at `/log/` — update at end of each session
 
@@ -77,10 +77,10 @@ Skidmore, Union College, Middlebury, Western Washington, University of Alaska Fa
 
 ## University Research Progress
 
-*No universities researched yet.*
-
 | University | Country | File created | Data complete | Scored |
 |-----------|---------|-------------|---------------|--------|
+| Union College | USA | ✓ | ✓ | ✓ |
+| Skidmore College | USA | ✓ | ✓ | ✓ |
 
 ---
 
